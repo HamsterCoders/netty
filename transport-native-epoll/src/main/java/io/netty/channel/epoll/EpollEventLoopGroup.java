@@ -18,6 +18,7 @@ package io.netty.channel.epoll;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.MultithreadEventLoopGroup;
 import io.netty.util.concurrent.EventExecutor;
+import io.netty.util.internal.FastThreadLocal;
 
 import java.util.concurrent.ThreadFactory;
 
@@ -69,5 +70,10 @@ public final class EpollEventLoopGroup extends MultithreadEventLoopGroup {
     @Override
     protected EventExecutor newChild(ThreadFactory threadFactory, Object... args) throws Exception {
         return new EpollEventLoop(this, threadFactory, (Integer) args[0]);
+    }
+
+    @Override
+    protected ThreadFactory newDefaultThreadFactory() {
+        return new FastThreadLocal.FastThreadLocalThreadFactory(EpollEventLoopGroup.class);
     }
 }

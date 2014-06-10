@@ -17,6 +17,7 @@ package io.netty.microbench.util;
 
 import io.netty.util.ResourceLeakDetector;
 import io.netty.util.concurrent.DefaultThreadFactory;
+import io.netty.util.internal.FastThreadLocal;
 import io.netty.util.internal.SystemPropertyUtil;
 import org.junit.Test;
 import org.openjdk.jmh.annotations.Fork;
@@ -50,7 +51,7 @@ public class AbstractMicrobenchmark {
     public static final class HarnessExecutor extends ThreadPoolExecutor {
         public HarnessExecutor(int maxThreads, String prefix) {
             super(0, maxThreads, 1L, TimeUnit.DAYS, new SynchronousQueue<Runnable>(),
-                  new DefaultThreadFactory(prefix));
+                  new FastThreadLocal.FastThreadLocalThreadFactory(prefix));
             System.out.println("Using harness executor");
         }
     }
