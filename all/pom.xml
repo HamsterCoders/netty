@@ -34,7 +34,7 @@
     <dependencyVersionsDir>${project.build.directory}/versions</dependencyVersionsDir>
   </properties>
 
-  <profiles>
+  <!--<profiles>
     <profile>
       <id>full</id>
       <properties>
@@ -89,7 +89,7 @@
         </os>
       </activation>
       <dependencies>
-        <!-- All release modules -->
+        &lt;!&ndash; All release modules &ndash;&gt;
         <dependency>
           <groupId>${project.groupId}</groupId>
           <artifactId>netty-transport-native-epoll</artifactId>
@@ -100,7 +100,7 @@
         </dependency>
       </dependencies>
     </profile>
-  </profiles>
+  </profiles>-->
 
   <dependencies>
 
@@ -175,13 +175,13 @@
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
-    <dependency>
+<!--    <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>netty-example</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
       <optional>true</optional>
-    </dependency>
+    </dependency>-->
 
     <!-- Add optional dependencies explicitly to avoid Javadoc warnings and errors. -->
     <dependency>

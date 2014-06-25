@@ -112,17 +112,6 @@
         <argLine.bootcp>-D_</argLine.bootcp>
       </properties>
     </profile>
-    <profile>
-      <id>linux</id>
-      <activation>
-        <os>
-          <family>linux</family>
-        </os>
-      </activation>
-      <modules>
-        <module>transport-native-epoll</module>
-      </modules>
-    </profile>
     <!--
       Netty must be released from RHEL 6.5 x86_64 or compatible so that:
 
@@ -343,7 +332,6 @@
     <module>transport-udt</module>
     <module>handler</module>
     <module>all</module>
-    <module>tarball</module>
   </modules>
 
   <dependencyManagement>
