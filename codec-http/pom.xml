@@ -20,11 +20,10 @@
   <parent>
     <groupId>io.netty</groupId>
     <artifactId>netty-parent</artifactId>
-    <version>4.0.20.Final-SNAPSHOT</version>
+    <version>4.0.20-Http-Fork</version>
   </parent>
 
   <artifactId>netty-codec-http</artifactId>
-  <version>4.0.20-Fork</version>
   <packaging>jar</packaging>
 
   <name>Netty/Codec/HTTP</name>
@@ -33,12 +32,12 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>netty-codec</artifactId>
-      <version>4.0.20.Final-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>netty-handler</artifactId>
-      <version>4.0.20.Final-SNAPSHOT</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>com.jcraft</groupId>
