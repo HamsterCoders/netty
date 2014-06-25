@@ -126,7 +126,7 @@ public class HttpObjectAggregator extends MessageToMessageDecoder<HttpObject> {
             //       No need to notify the upstream handlers - just log.
             //       If decoding a response, just throw an exception.
             if (is100ContinueExpected(m)) {
-                ctx.writeAndFlush(CONTINUE).addListener(new ChannelFutureListener() {
+                ctx.pipeline().writeAndFlush(CONTINUE).addListener(new ChannelFutureListener() {
                     @Override
                     public void operationComplete(ChannelFuture future) throws Exception {
                         if (!future.isSuccess()) {
