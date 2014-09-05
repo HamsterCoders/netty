@@ -17,13 +17,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>org.sonatype.oss</groupId>
-    <artifactId>oss-parent</artifactId>
-    <version>9</version>
-  </parent>
 
-  <groupId>io.netty</groupId>
+  <groupId>hamstercoders</groupId>
   <artifactId>netty-parent</artifactId>
   <packaging>pom</packaging>
   <version>4.0.20.Final-SNAPSHOT</version>
@@ -31,7 +26,7 @@
   <name>Netty</name>
   <url>http://netty.io/</url>
   <description>
-    Netty is an asynchronous event-driven network application framework for 
+    Netty is an asynchronous event-driven network application framework for
     rapid development of maintainable high performance protocol servers and
     clients.
   </description>
@@ -469,14 +464,14 @@
         </exclusions>
         <optional>true</optional>
       </dependency>
-      
+
       <!-- Metrics providers -->
       <dependency>
         <groupId>com.yammer.metrics</groupId>
         <artifactId>metrics-core</artifactId>
         <version>2.2.0</version>
       </dependency>
-      
+
       <!-- Common test dependencies -->
       <dependency>
         <groupId>junit</groupId>
@@ -703,7 +698,7 @@
         </executions>
         <dependencies>
           <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>io.netty</groupId>
             <artifactId>netty-build</artifactId>
             <version>21</version>
           </dependency>
@@ -769,7 +764,7 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>             
+      </plugin>
       <plugin>
         <artifactId>maven-source-plugin</artifactId>
         <version>2.2.1</version>
@@ -1063,7 +1058,7 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
           <version>1.8</version>
-        </plugin>               
+        </plugin>
         <plugin>
           <groupId>org.fusesource.hawtjni</groupId>
           <artifactId>maven-hawtjni-plugin</artifactId>
