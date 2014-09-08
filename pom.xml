@@ -21,7 +21,7 @@
   <groupId>hamstercoders</groupId>
   <artifactId>netty-parent</artifactId>
   <packaging>pom</packaging>
-  <version>4.0.20.Final-SNAPSHOT</version>
+  <version>4.0.20.Final</version>
 
   <name>Netty</name>
   <url>http://netty.io/</url>
